@@ -17,12 +17,15 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 // - - - - - - - - - - - - - Navbar - - - - - - - - - - - - - //
 
 .navbar {
   border: 1px solid transparent;
   background-color: white;
-  font-family: 'Lato', sans-serif;
   padding-top: 50px;
   margin-bottom: 50px;
   .navbar-brand {
@@ -32,8 +35,48 @@
     }
   }
   .btn {
-    margin-left: 10px; 
+    margin-left: 10px;
     background-color: #2b9cf2;
     border: 1px solid transparent;
+  }
+}
+
+// - - - - - - - - - - - - - Sign up - - - - - - - - - - - - - //
+
+#sign_up {
+  h1 {
+    font-size: 40px;
+  }
+  .signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    .form-control {
+      height: 52px;
+    }
+    .btn {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: #2b9cf2;
+      border: 1px solid transparent;
+    }
+  }
+  @media (min-width: 768px) {
+    .v-center {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    .container {
+      padding: 0 5%;
+      max-width: 480px;
+      width: 100%;
+    }
+    .signup-tos {
+      text-align: center;
+    }
   }
 }
