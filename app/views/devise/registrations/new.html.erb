@@ -8,59 +8,41 @@
     </div>
     <div class="row v-center">
       <div class="col-sm-5 col-sm-offset-1">
-        
+        <div class="signup-form">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true %>
-            </div>
-
-            <div class="field">
-              <%= f.label :password %>
-              <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-              <%= f.password_field :password, autocomplete: "off" %>
-            </div>
-
-            <div class="field">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
-            </div>
-        </div>
-
-
-          <div class="actions">
-            <%= f.submit "Sign up" %>
+          <%= devise_error_messages! %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, class: "form-control" %>
           </div>
-        <% end %>
-
-        <form class="signup-form" role="form" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="mcH9PrNx+e44SWQ5+WcXxxEOewAe/i1f76kAC3TOvVZQCxZ9KEqFWxDHmRKZ8iW8LhXhKo3zhA7jzYeu73ERxQ==">
-          <input type="hidden" name="signup_page" id="signup_page">
-          <input type="hidden" name="signup_form" id="signup_form">
-          <div class="form-group"><label class="control-label" for="user_full_name">Your name</label><input placeholder="Homer Simpson" required="required" autofocus="autofocus" class="form-control" type="text" value="" name="user[full_name]" id="user_full_name"></div>
-          <div class="form-group"><label class="control-label" for="user_email">Your email</label><input placeholder="donutluvr986@aol.com" required="required" class="form-control" type="email" name="user[email]" id="user_email"></div>
-          <div class="form-group"><label class="control-label" for="user_password">Password</label><input placeholder="mmmdonuts123" required="required" class="form-control" type="password" name="user[password]" id="user_password"></div>
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
           <div class="row v-center">
-            <div class="col-sm-5"><input type="submit" name="commit" value="Sign up" class="btn btn-primary btn-block"></div>
-            <div class="col-sm-7">
-              <div class="signup-tos"><div class="text-muted">
-                Agree to our
-                <a class="text-sans-serif text-bold text-muted" target="_blank" href="#">Terms of Service</a>
-                and
-                <a class="text-sans-serif text-bold text-muted" target="_blank" href="#">Privacy Policy.</a>
+            <div class="col-sm-5">
+              <div class="actions">
+                <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
               </div>
             </div>
+            <div class="col-sm-7">
+              <div class="signup-tos">Agree to our Terms of Service and Privacy Policy.</div>
+            </div>
+            <% end %>
           </div>
         </div>
-      </form>
+      </div>
+      <div class="col-sm-5 hidden-xs">
+        <img class="img-responsive center-block" src="https://www.withcoach.com/assets/marketing/profit-bf09cda258f678a95b4598cacd833d662a80a3ffda4bef8529fc4fa15d9dc970.svg" alt="Profit">
+      </div>
+      <div class="col-sm-1"></div>
     </div>
-    <div class="col-sm-5 hidden-xs">
-      <img class="img-responsive center-block" src="https://www.withcoach.com/assets/marketing/profit-bf09cda258f678a95b4598cacd833d662a80a3ffda4bef8529fc4fa15d9dc970.svg" alt="Profit">
-    </div>
-    <div class="col-sm-1"></div>
-  </div>
   </div>
 </section>
